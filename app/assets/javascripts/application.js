@@ -15,3 +15,6 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).on("ready page:change", function() {
+    $('.tag-tooltip').tooltip();
+});

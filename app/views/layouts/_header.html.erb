@@ -17,6 +17,7 @@
       
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
+        <li><%= link_to '<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" data-html="true" title="Add New Task"></i>'.html_safe, new_task_path %></li>
         <li><%= link_to 'Settings', edit_user_registration_path %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
       <% else %>

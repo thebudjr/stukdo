@@ -1,10 +1,10 @@
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<%= link_to edit_task_path(task) do %>
-			created <%= time_ago_in_words(task.created_at) %> ago
+		<%= link_to edit_task_path(task)  do %>
+			<span data-toggle="tooltip" data-placement="right" data-html="true" title="Edit Task">Created <%= time_ago_in_words(task.created_at) %> ago</span>
 		<% end %>
 
-		<%= link_to 'x', task_path(task), method: :delete, data: {confirm: 'Are you sure?'}, class: 'pull-right' %>
+		<%= link_to '<i class="fa fa-times" data-toggle="tooltip" data-placement="right" data-html="true" title="Erase Task"></i>'.html_safe, task_path(task), method: :delete, data: {confirm: 'Are you sure?'}, class: 'pull-right' %>
 
 	</div>
 	<div class="panel-body"><%= raw(task.content_html) %></div>
